@@ -5,7 +5,7 @@ import smtplib #this sends email
 URL = "https://www.amazon.co.uk/Soundcore-Microphones-Reduction-Waterproof-Earphones-Black/dp/B07SJR6HL3/ref=sr_1_10?dchild=1&keywords=earphones&psr=EY17&qid=1606683146&s=black-friday&sr=1-10"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"}
 PRICE_VALUE = 35
-EMAIL_ADDRESS = "gymalpha18@gmail.com"
+EMAIL_ADDRESS = "ENTER YOUR EMAIL HERE"
  #if amazon price is less than our desired price (PRICE_VALUE) than send us an email
 def trackPrices():
     price = float(getPrice())
@@ -33,7 +33,7 @@ def sendEmail():
     server = smtplib.SMTP(host='smtp.gmail.com', port=587)
     server.ehlo()
     server.starttls()
-    server.login(EMAIL_ADDRESS, 'Kalpana_2012')
+    server.login(EMAIL_ADDRESS, 'ENTER YOUR EMAIL PASS HERE!')
     server.sendmail(EMAIL_ADDRESS, EMAIL_ADDRESS, mailtext)
     print("Sent Email!")
     pass
